@@ -1,0 +1,13 @@
+D:\VSCode\TEO\TEO\obj\Debug\TEO.csproj.AssemblyReference.cache
+D:\VSCode\TEO\TEO\obj\Debug\TEO.Properties.Resources.resources
+D:\VSCode\TEO\TEO\obj\Debug\TEO.csproj.GenerateResource.cache
+D:\VSCode\TEO\TEO\obj\Debug\TEO.csproj.CoreCompileInputs.cache
+D:\VSCode\TEO\TEO\bin\Debug\TEO.exe.config
+D:\VSCode\TEO\TEO\bin\Debug\TEO.exe
+D:\VSCode\TEO\TEO\bin\Debug\TEO.pdb
+D:\VSCode\TEO\TEO\obj\Debug\TEO.exe
+D:\VSCode\TEO\TEO\obj\Debug\TEO.pdb
+D:\VSCode\TEO\TEO\obj\Debug\TEO.TEO.resources
+D:\VSCode\TEO\TEO\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\VSCode\TEO\TEO\obj\Debug\TEO.csproj.Fody.CopyLocal.cache
+D:\VSCode\TEO\TEO\obj\Debug\TEO.csproj.CopyComplete
