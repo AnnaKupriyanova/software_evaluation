@@ -1,0 +1,77 @@
+.btn {
+  background: #ffffff;
+  border-radius: 50px;
+  font-family: 'Montserrat', sans-serif;
+  color: #000000;
+  font-size: 15px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  width: 350px;
+  display: block;
+  margin:0 auto;
+}
+.btn:hover {
+  background: #d7dde8;
+  text-decoration: none;
+}
+
+div{
+	background: white;
+	}
+
+#result{
+  font-size: 20px;
+}
+
+.formula{
+  color: rgb(255, 99, 27) ; 
+}
+
+#point{
+	font-style: italic;
+	color: #b6261e;
+}
+
+#nullLOC{
+  color: red;
+  margin-left: 1px;
+  position: fixed;
+}
+
+hr {
+  border: none; 
+  background-color: rgb(184, 19, 19); 
+  color: rgb(255, 164, 44); 
+  height: 2px; 
+}
+
+/* скрываем чекбоксы и блоки с содержанием */
+.hide {
+  display: none; 
+}
+.hide + label ~ div{
+  display: none;
+}
+/* оформляем текст label */
+.hide + label {
+  border-bottom: 1px dotted;
+  padding: 0;
+  cursor: pointer;
+  display: inline-block; 
+}
+.hide + label:hover {
+  font-weight: bold;
+  text-decoration: none;
+}
+/* вид текста label при активном переключателе */
+.hide:checked + label {
+  font-weight: bold;
+  border-bottom: 0;
+}
+/* когда чекбокс активен показываем блоки с содержанием  */
+.hide:checked + label + div {
+  display: block; 
+  background: #fff2e7;
+  padding: 10px; 
+}
