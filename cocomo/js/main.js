@@ -14,10 +14,9 @@ let a, b, c, d, size, PM, TM, EAF, EAFNS, PMNS, SCED;
 //cocomo1
 
 function calculate1(){
-	if (document.getElementById('LOC').value == 0){
-		document.getElementById('nullLOC').innerHTML = "Введите данные!";
+	if ((document.getElementById('LOC').value == 0) || (document.getElementById('LOC').value < 0)){
+		alert(`Введите кол-во строчек кода!`);
 	} else {
-		document.getElementById('nullLOC').innerHTML = " ";
 		size = parseFloat(document.getElementById('LOC').value);
 		handleProjectType1(arr1);
 		PM = a * Math.pow(size, b);
@@ -49,10 +48,9 @@ function handleProjectType1(arr1){
 
 
 function calculate(){
-	    if (document.getElementById('LOC').value == 0){
-			document.getElementById('nullLOC').innerHTML = "Введите данные!";
+		if ((document.getElementById('LOC').value == 0) || (document.getElementById('LOC').value < 0)){
+			alert(`Введите кол-во строчек кода!`);
 		} else {
-			document.getElementById('nullLOC').innerHTML = " ";
 			size = parseFloat(document.getElementById('LOC').value);
 			handleProjectType(arr);
 			EAF = calcEAF();
@@ -131,10 +129,9 @@ function calculateCocomoTwo(){
 	var a_prev = 2.94, b = 0.91, a_detail = 2.45, c = 3.67, d = 0.28;
 	 handleTypeEstimation();
 
-	    if(document.getElementById('LOC').value == 0){
-			document.getElementById('nullLOC').innerHTML = "Введите данные!";
+	 	if ((document.getElementById('LOC').value == 0) || (document.getElementById('LOC').value < 0)){
+			alert(`Введите кол-во строчек кода!`);
 		}else{
-			document.getElementById('nullLOC').innerHTML = " ";
 			size = parseFloat(document.getElementById('LOC').value);
 			EAF = calcEAFCocomoTwo(0);
 			EAFNS = calcEAFNSCocomoTwo(0);
