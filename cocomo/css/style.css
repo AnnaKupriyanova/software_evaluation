@@ -1,36 +1,46 @@
 .btn {
-  background: #ffffff;
-  border-radius: 50px;
-  font-family: 'Montserrat', sans-serif;
+  background: rgb(255, 246, 236);
+  border-radius: 100px;
+  border-color: rgb(255, 189, 119);;
   color: #000000;
-  font-size: 15px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 18px;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
   font-weight: bold;
-  width: 350px;
+  width: 250px;
   display: block;
   margin:0 auto;
 }
 .btn:hover {
-  background: #d7dde8;
+  background: rgb(255, 132, 0);
   text-decoration: none;
 }
 
-div{
-	background: white;
-	}
+input[type='radio'] {
+  accent-color: rgb(255, 183, 106);;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+body {
+  background-color: white;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 
 #result{
   font-size: 20px;
 }
 
 .formula{
-  color: rgb(255, 99, 27) ; 
+  color: rgb(255, 132, 0);
 }
 
 #point{
 	font-style: italic;
-	color: #b6261e;
+	color: rgb(255, 115, 0);
 }
 
 #nullLOC{
@@ -41,7 +51,7 @@ div{
 
 hr {
   border: none; 
-  background-color: rgb(184, 19, 19); 
+  background-color: rgb(255, 179, 98);
   color: rgb(255, 164, 44); 
   height: 2px; 
 }
@@ -71,7 +81,41 @@ hr {
 }
 /* когда чекбокс активен показываем блоки с содержанием  */
 .hide:checked + label + div {
-  display: block; 
-  background: #fff2e7;
+  display: block;
   padding: 10px; 
+}
+
+.tab {
+  overflow: hidden;
+  font-weight: 400;
+  font-size: 24px;
+  color: #262626;
+
+}
+
+.tab button {
+  background-color: inherit;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 20px;
+}
+
+.tab button.active {
+  color: rgb(255, 132, 0);
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+}
+
+.topright {
+  float: right;
+  cursor: pointer;
 }
