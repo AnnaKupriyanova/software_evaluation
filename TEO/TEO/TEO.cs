@@ -558,10 +558,10 @@ namespace TEO
                 double.TryParse((row.Cells[1].Value ?? "0").ToString().Replace(".", ","), out salary2);
 
                 avg_salary2 = Math.Round(salary2 / dayMonth1, 2);
-                row.Cells[2].Value = avg_salary2; //Средняя дневная ставка 
+                row.Cells[2].Value = Math.Round(avg_salary2, 2); //Средняя дневная ставка 
 
                 itog_days2 = Convert.ToInt32(row.Cells[3].Value);
-                row.Cells[4].Value = avg_salary2 * itog_days2 * (1 + Wd) * (1 + Wc);
+                row.Cells[4].Value = Math.Round(avg_salary2 * itog_days2 * (1 + Wd) * (1 + Wc), 2);
 
                 //Суммирование
                 double all_salary2 = 0;
@@ -578,10 +578,10 @@ namespace TEO
                 double.TryParse((row.Cells[1].Value ?? "0").ToString().Replace(".", ","), out salary1);
 
                 avg_salary1 = Math.Round(salary1 / dayMonth1, 2);
-                row.Cells[2].Value = avg_salary1; //Средняя дневная ставка 
+                row.Cells[2].Value = Math.Round(avg_salary1, 2); //Средняя дневная ставка 
 
                 itog_days1 = Convert.ToInt32(row.Cells[3].Value);
-                row.Cells[4].Value = avg_salary1 * itog_days1 * (1 + Wd) * (1 + Wc);
+                row.Cells[4].Value = Math.Round(avg_salary1 * itog_days1 * (1 + Wd) * (1 + Wc), 2);
 
                 //Суммирование
                 double all_salary1 = 0;
@@ -1160,6 +1160,16 @@ namespace TEO
         }
 
         private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewMaterial_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void tabPageEffect_Click(object sender, EventArgs e)
         {
 
         }

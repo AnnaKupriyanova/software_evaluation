@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabPageEffect = new System.Windows.Forms.TabPage();
             this.itog_EconomResult = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
@@ -37,13 +37,8 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.tb_en = new System.Windows.Forms.TextBox();
             this.dataGridViewEconomResults = new System.Windows.Forms.DataGridView();
-            this.Column30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonCalculateEconom = new System.Windows.Forms.Button();
             this.dataGridViewEconomEffect = new System.Windows.Forms.DataGridView();
-            this.Column24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPageExp = new System.Windows.Forms.TabPage();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.tb_h2 = new System.Windows.Forms.TextBox();
@@ -213,6 +208,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl = new System.Windows.Forms.TabControl();
+            this.Column24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPageEffect.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEconomResults)).BeginInit();
@@ -262,21 +262,22 @@
             this.tabPageEffect.Controls.Add(this.dataGridViewEconomResults);
             this.tabPageEffect.Controls.Add(this.buttonCalculateEconom);
             this.tabPageEffect.Controls.Add(this.dataGridViewEconomEffect);
-            this.tabPageEffect.Location = new System.Drawing.Point(4, 25);
+            this.tabPageEffect.Location = new System.Drawing.Point(4, 26);
             this.tabPageEffect.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageEffect.Name = "tabPageEffect";
             this.tabPageEffect.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPageEffect.Size = new System.Drawing.Size(1461, 873);
+            this.tabPageEffect.Size = new System.Drawing.Size(1461, 872);
             this.tabPageEffect.TabIndex = 4;
             this.tabPageEffect.Text = "Расчет показателей экономической эффективности";
             this.tabPageEffect.UseVisualStyleBackColor = true;
+            this.tabPageEffect.Click += new System.EventHandler(this.tabPageEffect_Click);
             // 
             // itog_EconomResult
             // 
             this.itog_EconomResult.AutoSize = true;
             this.itog_EconomResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.itog_EconomResult.ForeColor = System.Drawing.Color.Black;
-            this.itog_EconomResult.Location = new System.Drawing.Point(821, 151);
+            this.itog_EconomResult.Location = new System.Drawing.Point(724, 202);
             this.itog_EconomResult.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.itog_EconomResult.Name = "itog_EconomResult";
             this.itog_EconomResult.Size = new System.Drawing.Size(0, 16);
@@ -285,44 +286,45 @@
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label48.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label48.Location = new System.Drawing.Point(8, 256);
             this.label48.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(388, 16);
+            this.label48.Size = new System.Drawing.Size(376, 17);
             this.label48.TabIndex = 35;
             this.label48.Text = "Результаты экономического обоснования проекта";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label17.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label17.Location = new System.Drawing.Point(8, 9);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(186, 16);
+            this.label17.Size = new System.Drawing.Size(181, 17);
             this.label17.TabIndex = 34;
             this.label17.Text = "Экономический эффект";
             // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.tb_en);
-            this.groupBox5.Location = new System.Drawing.Point(755, 29);
+            this.groupBox5.Location = new System.Drawing.Point(699, 29);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox5.Size = new System.Drawing.Size(261, 72);
+            this.groupBox5.Size = new System.Drawing.Size(200, 114);
             this.groupBox5.TabIndex = 6;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Нормативный коэффициент экономической эффективности";
             // 
             // tb_en
             // 
-            this.tb_en.Location = new System.Drawing.Point(8, 39);
+            this.tb_en.Location = new System.Drawing.Point(8, 81);
             this.tb_en.Margin = new System.Windows.Forms.Padding(4);
             this.tb_en.Name = "tb_en";
-            this.tb_en.Size = new System.Drawing.Size(50, 22);
+            this.tb_en.Size = new System.Drawing.Size(50, 25);
             this.tb_en.TabIndex = 5;
+            this.tb_en.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_en.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             this.tb_en.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox8_KeyPress);
             // 
@@ -339,29 +341,13 @@
             this.dataGridViewEconomResults.Name = "dataGridViewEconomResults";
             this.dataGridViewEconomResults.ReadOnly = true;
             this.dataGridViewEconomResults.RowHeadersWidth = 51;
-            this.dataGridViewEconomResults.Size = new System.Drawing.Size(736, 183);
+            this.dataGridViewEconomResults.Size = new System.Drawing.Size(680, 161);
             this.dataGridViewEconomResults.TabIndex = 3;
-            // 
-            // Column30
-            // 
-            this.Column30.HeaderText = "Характеристика проекта";
-            this.Column30.MinimumWidth = 6;
-            this.Column30.Name = "Column30";
-            this.Column30.ReadOnly = true;
-            this.Column30.Width = 295;
-            // 
-            // Column31
-            // 
-            this.Column31.HeaderText = "Значение";
-            this.Column31.MinimumWidth = 6;
-            this.Column31.Name = "Column31";
-            this.Column31.ReadOnly = true;
-            this.Column31.Width = 150;
             // 
             // buttonCalculateEconom
             // 
-            this.buttonCalculateEconom.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.buttonCalculateEconom.Location = new System.Drawing.Point(816, 109);
+            this.buttonCalculateEconom.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonCalculateEconom.Location = new System.Drawing.Point(699, 151);
             this.buttonCalculateEconom.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCalculateEconom.Name = "buttonCalculateEconom";
             this.buttonCalculateEconom.Size = new System.Drawing.Size(200, 30);
@@ -384,34 +370,8 @@
             this.dataGridViewEconomEffect.Name = "dataGridViewEconomEffect";
             this.dataGridViewEconomEffect.ReadOnly = true;
             this.dataGridViewEconomEffect.RowHeadersWidth = 51;
-            this.dataGridViewEconomEffect.Size = new System.Drawing.Size(736, 217);
+            this.dataGridViewEconomEffect.Size = new System.Drawing.Size(680, 217);
             this.dataGridViewEconomEffect.TabIndex = 0;
-            // 
-            // Column24
-            // 
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column24.DefaultCellStyle = dataGridViewCellStyle7;
-            this.Column24.HeaderText = "Характеристика ";
-            this.Column24.MinimumWidth = 6;
-            this.Column24.Name = "Column24";
-            this.Column24.ReadOnly = true;
-            this.Column24.Width = 200;
-            // 
-            // Column25
-            // 
-            this.Column25.HeaderText = "Продукт-аналог";
-            this.Column25.MinimumWidth = 6;
-            this.Column25.Name = "Column25";
-            this.Column25.ReadOnly = true;
-            this.Column25.Width = 120;
-            // 
-            // Column26
-            // 
-            this.Column26.HeaderText = "Разрабатываемый продукт";
-            this.Column26.MinimumWidth = 6;
-            this.Column26.Name = "Column26";
-            this.Column26.ReadOnly = true;
-            this.Column26.Width = 120;
             // 
             // tabPageExp
             // 
@@ -439,11 +399,11 @@
             this.tabPageExp.Controls.Add(this.dataGridViewItog);
             this.tabPageExp.Controls.Add(this.dataGridViewZpAnalog);
             this.tabPageExp.Controls.Add(this.dataGridViewZpProject);
-            this.tabPageExp.Location = new System.Drawing.Point(4, 25);
+            this.tabPageExp.Location = new System.Drawing.Point(4, 26);
             this.tabPageExp.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageExp.Name = "tabPageExp";
             this.tabPageExp.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPageExp.Size = new System.Drawing.Size(1461, 873);
+            this.tabPageExp.Size = new System.Drawing.Size(1461, 872);
             this.tabPageExp.TabIndex = 3;
             this.tabPageExp.Text = "Расчет эксплуатационных затрат";
             this.tabPageExp.UseVisualStyleBackColor = true;
@@ -452,11 +412,11 @@
             // groupBox10
             // 
             this.groupBox10.Controls.Add(this.tb_h2);
-            this.groupBox10.Location = new System.Drawing.Point(745, 476);
+            this.groupBox10.Location = new System.Drawing.Point(713, 476);
             this.groupBox10.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox10.Size = new System.Drawing.Size(261, 71);
+            this.groupBox10.Size = new System.Drawing.Size(321, 71);
             this.groupBox10.TabIndex = 56;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Норматив среднесуточной загрузки, час./день";
@@ -466,18 +426,18 @@
             this.tb_h2.Location = new System.Drawing.Point(8, 36);
             this.tb_h2.Margin = new System.Windows.Forms.Padding(4);
             this.tb_h2.Name = "tb_h2";
-            this.tb_h2.Size = new System.Drawing.Size(50, 22);
+            this.tb_h2.Size = new System.Drawing.Size(50, 25);
             this.tb_h2.TabIndex = 7;
             this.tb_h2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // groupBox17
             // 
             this.groupBox17.Controls.Add(this.tb_d2);
-            this.groupBox17.Location = new System.Drawing.Point(745, 411);
+            this.groupBox17.Location = new System.Drawing.Point(713, 411);
             this.groupBox17.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox17.Name = "groupBox17";
             this.groupBox17.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox17.Size = new System.Drawing.Size(261, 57);
+            this.groupBox17.Size = new System.Drawing.Size(321, 57);
             this.groupBox17.TabIndex = 57;
             this.groupBox17.TabStop = false;
             this.groupBox17.Text = "Кол-во рабочих дней в году";
@@ -488,8 +448,9 @@
             this.tb_d2.Location = new System.Drawing.Point(7, 23);
             this.tb_d2.Margin = new System.Windows.Forms.Padding(4);
             this.tb_d2.Name = "tb_d2";
-            this.tb_d2.Size = new System.Drawing.Size(50, 22);
+            this.tb_d2.Size = new System.Drawing.Size(50, 25);
             this.tb_d2.TabIndex = 9;
+            this.tb_d2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_d2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox192_KeyPress);
             // 
             // groupBox1
@@ -498,11 +459,11 @@
             this.groupBox1.Controls.Add(this.tb_kr1);
             this.groupBox1.Controls.Add(this.label40);
             this.groupBox1.Controls.Add(this.tb_ko1);
-            this.groupBox1.Location = new System.Drawing.Point(955, 30);
+            this.groupBox1.Location = new System.Drawing.Point(976, 30);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(261, 106);
+            this.groupBox1.Size = new System.Drawing.Size(321, 106);
             this.groupBox1.TabIndex = 51;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Коэффициент, учитывающий дополнительную з/п";
@@ -513,7 +474,7 @@
             this.label15.Location = new System.Drawing.Point(66, 76);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(168, 16);
+            this.label15.Size = new System.Drawing.Size(176, 17);
             this.label15.TabIndex = 10;
             this.label15.Text = "Районный коэффициент";
             // 
@@ -522,7 +483,7 @@
             this.tb_kr1.Location = new System.Drawing.Point(8, 73);
             this.tb_kr1.Margin = new System.Windows.Forms.Padding(4);
             this.tb_kr1.Name = "tb_kr1";
-            this.tb_kr1.Size = new System.Drawing.Size(50, 22);
+            this.tb_kr1.Size = new System.Drawing.Size(50, 25);
             this.tb_kr1.TabIndex = 9;
             this.tb_kr1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_kr1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox115_KeyPress);
@@ -533,7 +494,7 @@
             this.label40.Location = new System.Drawing.Point(66, 46);
             this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(171, 16);
+            this.label40.Size = new System.Drawing.Size(182, 17);
             this.label40.TabIndex = 8;
             this.label40.Text = "Коэффициент отпускных";
             // 
@@ -542,7 +503,7 @@
             this.tb_ko1.Location = new System.Drawing.Point(8, 43);
             this.tb_ko1.Margin = new System.Windows.Forms.Padding(4);
             this.tb_ko1.Name = "tb_ko1";
-            this.tb_ko1.Size = new System.Drawing.Size(50, 22);
+            this.tb_ko1.Size = new System.Drawing.Size(50, 25);
             this.tb_ko1.TabIndex = 7;
             this.tb_ko1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_ko1.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
@@ -558,11 +519,11 @@
             this.groupBox2.Controls.Add(this.tb_ffomc2);
             this.groupBox2.Controls.Add(this.label46);
             this.groupBox2.Controls.Add(this.label47);
-            this.groupBox2.Location = new System.Drawing.Point(955, 144);
+            this.groupBox2.Location = new System.Drawing.Point(976, 144);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(261, 174);
+            this.groupBox2.Size = new System.Drawing.Size(321, 174);
             this.groupBox2.TabIndex = 50;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Коэффициент, учитывающий отчисления на социальные нужды";
@@ -582,8 +543,9 @@
             this.tb_ctrax2.Location = new System.Drawing.Point(8, 140);
             this.tb_ctrax2.Margin = new System.Windows.Forms.Padding(4);
             this.tb_ctrax2.Name = "tb_ctrax2";
-            this.tb_ctrax2.Size = new System.Drawing.Size(50, 22);
+            this.tb_ctrax2.Size = new System.Drawing.Size(50, 25);
             this.tb_ctrax2.TabIndex = 6;
+            this.tb_ctrax2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_ctrax2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox112_KeyPress);
             // 
             // tb_pf2
@@ -591,8 +553,9 @@
             this.tb_pf2.Location = new System.Drawing.Point(8, 46);
             this.tb_pf2.Margin = new System.Windows.Forms.Padding(4);
             this.tb_pf2.Name = "tb_pf2";
-            this.tb_pf2.Size = new System.Drawing.Size(50, 22);
+            this.tb_pf2.Size = new System.Drawing.Size(50, 25);
             this.tb_pf2.TabIndex = 0;
+            this.tb_pf2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_pf2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox109_KeyPress);
             // 
             // tb_fcc2
@@ -600,8 +563,9 @@
             this.tb_fcc2.Location = new System.Drawing.Point(8, 78);
             this.tb_fcc2.Margin = new System.Windows.Forms.Padding(4);
             this.tb_fcc2.Name = "tb_fcc2";
-            this.tb_fcc2.Size = new System.Drawing.Size(50, 22);
+            this.tb_fcc2.Size = new System.Drawing.Size(50, 25);
             this.tb_fcc2.TabIndex = 2;
+            this.tb_fcc2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_fcc2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox110_KeyPress);
             // 
             // label45
@@ -610,7 +574,7 @@
             this.label45.Location = new System.Drawing.Point(66, 81);
             this.label45.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(36, 16);
+            this.label45.Size = new System.Drawing.Size(36, 17);
             this.label45.TabIndex = 5;
             this.label45.Text = "ФСС";
             // 
@@ -619,8 +583,9 @@
             this.tb_ffomc2.Location = new System.Drawing.Point(8, 110);
             this.tb_ffomc2.Margin = new System.Windows.Forms.Padding(4);
             this.tb_ffomc2.Name = "tb_ffomc2";
-            this.tb_ffomc2.Size = new System.Drawing.Size(50, 22);
+            this.tb_ffomc2.Size = new System.Drawing.Size(50, 25);
             this.tb_ffomc2.TabIndex = 4;
+            this.tb_ffomc2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_ffomc2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox111_KeyPress);
             // 
             // label46
@@ -629,7 +594,7 @@
             this.label46.Location = new System.Drawing.Point(66, 49);
             this.label46.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(28, 16);
+            this.label46.Size = new System.Drawing.Size(30, 17);
             this.label46.TabIndex = 1;
             this.label46.Text = "ПФ";
             // 
@@ -639,37 +604,37 @@
             this.label47.Location = new System.Drawing.Point(66, 113);
             this.label47.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(59, 16);
+            this.label47.Size = new System.Drawing.Size(62, 17);
             this.label47.TabIndex = 3;
             this.label47.Text = "ФФОМС";
             // 
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(683, 10);
+            this.label44.Location = new System.Drawing.Point(690, 6);
             this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(196, 16);
+            this.label44.Size = new System.Drawing.Size(204, 17);
             this.label44.TabIndex = 49;
             this.label44.Text = "Кол-во рабочих дней в месяц";
             // 
             // tb_DayMonth2
             // 
-            this.tb_DayMonth2.Location = new System.Drawing.Point(897, 4);
+            this.tb_DayMonth2.Location = new System.Drawing.Point(918, 3);
             this.tb_DayMonth2.Margin = new System.Windows.Forms.Padding(4);
             this.tb_DayMonth2.Name = "tb_DayMonth2";
-            this.tb_DayMonth2.Size = new System.Drawing.Size(50, 22);
+            this.tb_DayMonth2.Size = new System.Drawing.Size(50, 25);
             this.tb_DayMonth2.TabIndex = 48;
             this.tb_DayMonth2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label29.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label29.Location = new System.Drawing.Point(9, 391);
             this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(282, 16);
+            this.label29.Size = new System.Drawing.Size(273, 17);
             this.label29.TabIndex = 45;
             this.label29.Text = "Годовые эксплуатационные затраты";
             // 
@@ -689,7 +654,7 @@
             this.label41.Location = new System.Drawing.Point(10, 369);
             this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(171, 16);
+            this.label41.Size = new System.Drawing.Size(181, 17);
             this.label41.TabIndex = 43;
             this.label41.Text = "Итого (с учетом начисл.):";
             // 
@@ -709,40 +674,40 @@
             this.label39.Location = new System.Drawing.Point(10, 177);
             this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(171, 16);
+            this.label39.Size = new System.Drawing.Size(181, 17);
             this.label39.TabIndex = 41;
             this.label39.Text = "Итого (с учетом начисл.):";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label14.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label14.Location = new System.Drawing.Point(9, 200);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(515, 16);
+            this.label14.Size = new System.Drawing.Size(497, 17);
             this.label14.TabIndex = 34;
             this.label14.Text = "Данные по заработной плате специалистов (для продукта-аналога)";
             // 
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label33.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label33.Location = new System.Drawing.Point(9, 10);
             this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(440, 16);
+            this.label33.Size = new System.Drawing.Size(426, 17);
             this.label33.TabIndex = 33;
             this.label33.Text = "Данные по заработной плате специалистов (для проекта)";
             // 
             // groupBox19
             // 
             this.groupBox19.Controls.Add(this.tb_naclad2);
-            this.groupBox19.Location = new System.Drawing.Point(1015, 647);
+            this.groupBox19.Location = new System.Drawing.Point(1059, 647);
             this.groupBox19.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox19.Name = "groupBox19";
             this.groupBox19.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox19.Size = new System.Drawing.Size(261, 54);
+            this.groupBox19.Size = new System.Drawing.Size(321, 54);
             this.groupBox19.TabIndex = 13;
             this.groupBox19.TabStop = false;
             this.groupBox19.Text = "Норматив накладных расходов";
@@ -752,18 +717,19 @@
             this.tb_naclad2.Location = new System.Drawing.Point(8, 23);
             this.tb_naclad2.Margin = new System.Windows.Forms.Padding(4);
             this.tb_naclad2.Name = "tb_naclad2";
-            this.tb_naclad2.Size = new System.Drawing.Size(50, 22);
+            this.tb_naclad2.Size = new System.Drawing.Size(50, 25);
             this.tb_naclad2.TabIndex = 10;
+            this.tb_naclad2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_naclad2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox28_KeyPress);
             // 
             // groupBox18
             // 
             this.groupBox18.Controls.Add(this.tb_zatrat_material);
-            this.groupBox18.Location = new System.Drawing.Point(1015, 499);
+            this.groupBox18.Location = new System.Drawing.Point(1059, 499);
             this.groupBox18.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox18.Name = "groupBox18";
             this.groupBox18.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox18.Size = new System.Drawing.Size(261, 68);
+            this.groupBox18.Size = new System.Drawing.Size(321, 68);
             this.groupBox18.TabIndex = 14;
             this.groupBox18.TabStop = false;
             this.groupBox18.Text = "Затраты на материалы, потребляемые в теч. года";
@@ -773,18 +739,19 @@
             this.tb_zatrat_material.Location = new System.Drawing.Point(8, 36);
             this.tb_zatrat_material.Margin = new System.Windows.Forms.Padding(4);
             this.tb_zatrat_material.Name = "tb_zatrat_material";
-            this.tb_zatrat_material.Size = new System.Drawing.Size(50, 22);
+            this.tb_zatrat_material.Size = new System.Drawing.Size(50, 25);
             this.tb_zatrat_material.TabIndex = 10;
+            this.tb_zatrat_material.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_zatrat_material.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox27_KeyPress);
             // 
             // groupBox16
             // 
             this.groupBox16.Controls.Add(this.tb_c_remont);
-            this.groupBox16.Location = new System.Drawing.Point(1015, 571);
+            this.groupBox16.Location = new System.Drawing.Point(1059, 571);
             this.groupBox16.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox16.Name = "groupBox16";
             this.groupBox16.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox16.Size = new System.Drawing.Size(261, 54);
+            this.groupBox16.Size = new System.Drawing.Size(321, 54);
             this.groupBox16.TabIndex = 12;
             this.groupBox16.TabStop = false;
             this.groupBox16.Text = "Норматив затрат на ремонт ";
@@ -794,18 +761,19 @@
             this.tb_c_remont.Location = new System.Drawing.Point(8, 23);
             this.tb_c_remont.Margin = new System.Windows.Forms.Padding(4);
             this.tb_c_remont.Name = "tb_c_remont";
-            this.tb_c_remont.Size = new System.Drawing.Size(50, 22);
+            this.tb_c_remont.Size = new System.Drawing.Size(50, 25);
             this.tb_c_remont.TabIndex = 10;
+            this.tb_c_remont.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_c_remont.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox25_KeyPress);
             // 
             // groupBox15
             // 
             this.groupBox15.Controls.Add(this.tb_g2);
-            this.groupBox15.Location = new System.Drawing.Point(745, 571);
+            this.groupBox15.Location = new System.Drawing.Point(713, 571);
             this.groupBox15.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox15.Name = "groupBox15";
             this.groupBox15.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox15.Size = new System.Drawing.Size(262, 67);
+            this.groupBox15.Size = new System.Drawing.Size(322, 67);
             this.groupBox15.TabIndex = 13;
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "Коэф. использования мощности оборудования";
@@ -815,18 +783,19 @@
             this.tb_g2.Location = new System.Drawing.Point(9, 37);
             this.tb_g2.Margin = new System.Windows.Forms.Padding(4);
             this.tb_g2.Name = "tb_g2";
-            this.tb_g2.Size = new System.Drawing.Size(50, 22);
+            this.tb_g2.Size = new System.Drawing.Size(50, 25);
             this.tb_g2.TabIndex = 10;
+            this.tb_g2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_g2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox24_KeyPress);
             // 
             // groupBox14
             // 
             this.groupBox14.Controls.Add(this.tb_a2);
-            this.groupBox14.Location = new System.Drawing.Point(1015, 411);
+            this.groupBox14.Location = new System.Drawing.Point(1059, 411);
             this.groupBox14.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox14.Size = new System.Drawing.Size(261, 70);
+            this.groupBox14.Size = new System.Drawing.Size(321, 70);
             this.groupBox14.TabIndex = 12;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Норма годовых амортизационных отчислений оборудования";
@@ -836,18 +805,19 @@
             this.tb_a2.Location = new System.Drawing.Point(8, 38);
             this.tb_a2.Margin = new System.Windows.Forms.Padding(4);
             this.tb_a2.Name = "tb_a2";
-            this.tb_a2.Size = new System.Drawing.Size(50, 22);
+            this.tb_a2.Size = new System.Drawing.Size(50, 25);
             this.tb_a2.TabIndex = 10;
+            this.tb_a2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_a2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox23_KeyPress);
             // 
             // groupBox12
             // 
             this.groupBox12.Controls.Add(this.tb_n2);
-            this.groupBox12.Location = new System.Drawing.Point(745, 719);
+            this.groupBox12.Location = new System.Drawing.Point(713, 710);
             this.groupBox12.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox12.Size = new System.Drawing.Size(262, 54);
+            this.groupBox12.Size = new System.Drawing.Size(322, 54);
             this.groupBox12.TabIndex = 9;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Установленная мощность, кВт.";
@@ -857,36 +827,38 @@
             this.tb_n2.Location = new System.Drawing.Point(8, 23);
             this.tb_n2.Margin = new System.Windows.Forms.Padding(4);
             this.tb_n2.Name = "tb_n2";
-            this.tb_n2.Size = new System.Drawing.Size(50, 22);
+            this.tb_n2.Size = new System.Drawing.Size(50, 25);
             this.tb_n2.TabIndex = 10;
+            this.tb_n2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_n2.TextChanged += new System.EventHandler(this.textBox21_TextChanged);
             this.tb_n2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox21_KeyPress);
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.tb_t2);
-            this.groupBox4.Location = new System.Drawing.Point(745, 643);
+            this.groupBox4.Location = new System.Drawing.Point(713, 643);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Size = new System.Drawing.Size(262, 68);
+            this.groupBox4.Size = new System.Drawing.Size(322, 58);
             this.groupBox4.TabIndex = 8;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Тариф на электроэнергию, руб./кВт ч.";
             // 
             // tb_t2
             // 
-            this.tb_t2.Location = new System.Drawing.Point(8, 36);
+            this.tb_t2.Location = new System.Drawing.Point(8, 27);
             this.tb_t2.Margin = new System.Windows.Forms.Padding(4);
             this.tb_t2.Name = "tb_t2";
-            this.tb_t2.Size = new System.Drawing.Size(50, 22);
+            this.tb_t2.Size = new System.Drawing.Size(50, 25);
             this.tb_t2.TabIndex = 10;
+            this.tb_t2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_t2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox7_KeyPress);
             // 
             // buttonCalculateZatrat
             // 
-            this.buttonCalculateZatrat.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.buttonCalculateZatrat.Location = new System.Drawing.Point(537, 734);
+            this.buttonCalculateZatrat.Font = new System.Drawing.Font("Cambria", 9F);
+            this.buttonCalculateZatrat.Location = new System.Drawing.Point(502, 734);
             this.buttonCalculateZatrat.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCalculateZatrat.Name = "buttonCalculateZatrat";
             this.buttonCalculateZatrat.Size = new System.Drawing.Size(200, 30);
@@ -909,19 +881,19 @@
             this.dataGridViewItog.Name = "dataGridViewItog";
             this.dataGridViewItog.ReadOnly = true;
             this.dataGridViewItog.RowHeadersWidth = 51;
-            this.dataGridViewItog.Size = new System.Drawing.Size(725, 315);
+            this.dataGridViewItog.Size = new System.Drawing.Size(690, 315);
             this.dataGridViewItog.TabIndex = 4;
             // 
             // Column21
             // 
             this.Column21.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column21.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column21.DefaultCellStyle = dataGridViewCellStyle13;
             this.Column21.HeaderText = "Статьи затрат";
             this.Column21.MinimumWidth = 10;
             this.Column21.Name = "Column21";
             this.Column21.ReadOnly = true;
-            this.Column21.Width = 120;
+            this.Column21.Width = 122;
             // 
             // Column22
             // 
@@ -953,7 +925,7 @@
             this.dataGridViewZpAnalog.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewZpAnalog.Name = "dataGridViewZpAnalog";
             this.dataGridViewZpAnalog.RowHeadersWidth = 51;
-            this.dataGridViewZpAnalog.Size = new System.Drawing.Size(935, 144);
+            this.dataGridViewZpAnalog.Size = new System.Drawing.Size(956, 144);
             this.dataGridViewZpAnalog.TabIndex = 2;
             this.dataGridViewZpAnalog.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView7_CellValueChanged);
             this.dataGridViewZpAnalog.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridView7_EditingControlShowing);
@@ -1009,7 +981,7 @@
             this.dataGridViewZpProject.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewZpProject.Name = "dataGridViewZpProject";
             this.dataGridViewZpProject.RowHeadersWidth = 51;
-            this.dataGridViewZpProject.Size = new System.Drawing.Size(935, 142);
+            this.dataGridViewZpProject.Size = new System.Drawing.Size(956, 142);
             this.dataGridViewZpProject.TabIndex = 0;
             this.dataGridViewZpProject.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView6_CellValueChanged);
             this.dataGridViewZpProject.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridView6_EditingControlShowing);
@@ -1084,11 +1056,11 @@
             this.tabPageDev.Controls.Add(this.dataGridViewMaterial);
             this.tabPageDev.Controls.Add(this.dataGridViewSalary);
             this.tabPageDev.Controls.Add(this.groupBox24);
-            this.tabPageDev.Location = new System.Drawing.Point(4, 25);
+            this.tabPageDev.Location = new System.Drawing.Point(4, 26);
             this.tabPageDev.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageDev.Name = "tabPageDev";
             this.tabPageDev.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPageDev.Size = new System.Drawing.Size(1461, 873);
+            this.tabPageDev.Size = new System.Drawing.Size(1461, 872);
             this.tabPageDev.TabIndex = 2;
             this.tabPageDev.Text = "Расчет затрат на разработку проекта и внедрение аналога";
             this.tabPageDev.UseVisualStyleBackColor = true;
@@ -1107,11 +1079,11 @@
             // groupBox20
             // 
             this.groupBox20.Controls.Add(this.tb_tx);
-            this.groupBox20.Location = new System.Drawing.Point(955, 662);
+            this.groupBox20.Location = new System.Drawing.Point(821, 661);
             this.groupBox20.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox20.Name = "groupBox20";
             this.groupBox20.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox20.Size = new System.Drawing.Size(261, 71);
+            this.groupBox20.Size = new System.Drawing.Size(313, 71);
             this.groupBox20.TabIndex = 24;
             this.groupBox20.TabStop = false;
             this.groupBox20.Text = "Трудоемкость однократной обработки информации, час";
@@ -1121,7 +1093,7 @@
             this.tb_tx.Location = new System.Drawing.Point(8, 38);
             this.tb_tx.Margin = new System.Windows.Forms.Padding(4);
             this.tb_tx.Name = "tb_tx";
-            this.tb_tx.Size = new System.Drawing.Size(50, 22);
+            this.tb_tx.Size = new System.Drawing.Size(50, 25);
             this.tb_tx.TabIndex = 7;
             this.tb_tx.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_tx.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox29_KeyPress);
@@ -1132,7 +1104,7 @@
             this.label37.Location = new System.Drawing.Point(9, 579);
             this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(116, 16);
+            this.label37.Size = new System.Drawing.Size(121, 17);
             this.label37.TabIndex = 47;
             this.label37.Text = "Итоговая сумма:";
             // 
@@ -1140,7 +1112,7 @@
             // 
             this.itog_sum_develop.AutoSize = true;
             this.itog_sum_develop.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.itog_sum_develop.Location = new System.Drawing.Point(587, 838);
+            this.itog_sum_develop.Location = new System.Drawing.Point(535, 838);
             this.itog_sum_develop.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.itog_sum_develop.Name = "itog_sum_develop";
             this.itog_sum_develop.Size = new System.Drawing.Size(0, 16);
@@ -1149,10 +1121,10 @@
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(463, 838);
+            this.label38.Location = new System.Drawing.Point(411, 838);
             this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(116, 16);
+            this.label38.Size = new System.Drawing.Size(121, 17);
             this.label38.TabIndex = 45;
             this.label38.Text = "Итоговая сумма:";
             // 
@@ -1172,7 +1144,7 @@
             this.label35.Location = new System.Drawing.Point(9, 838);
             this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(116, 16);
+            this.label35.Size = new System.Drawing.Size(121, 17);
             this.label35.TabIndex = 43;
             this.label35.Text = "Итоговая сумма:";
             // 
@@ -1192,7 +1164,7 @@
             this.label34.Location = new System.Drawing.Point(9, 400);
             this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(116, 16);
+            this.label34.Size = new System.Drawing.Size(121, 17);
             this.label34.TabIndex = 41;
             this.label34.Text = "Итоговая сумма:";
             // 
@@ -1212,7 +1184,7 @@
             this.label36.Location = new System.Drawing.Point(9, 163);
             this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(104, 16);
+            this.label36.Size = new System.Drawing.Size(107, 17);
             this.label36.TabIndex = 38;
             this.label36.Text = "Итоговая ОЗП:";
             this.label36.Click += new System.EventHandler(this.label36_Click);
@@ -1220,22 +1192,22 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label13.Location = new System.Drawing.Point(9, 598);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(330, 16);
+            this.label13.Size = new System.Drawing.Size(314, 17);
             this.label13.TabIndex = 37;
             this.label13.Text = "Затраты, связанные с внедрением аналога";
             // 
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label28.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label28.Location = new System.Drawing.Point(9, 418);
             this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(427, 16);
+            this.label28.Size = new System.Drawing.Size(408, 17);
             this.label28.TabIndex = 36;
             this.label28.Text = "Затраты на основное и вспомогательное оборудование";
             this.label28.Click += new System.EventHandler(this.label28_Click);
@@ -1243,11 +1215,11 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(463, 598);
+            this.label12.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.Location = new System.Drawing.Point(411, 598);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(184, 16);
+            this.label12.Size = new System.Drawing.Size(176, 17);
             this.label12.TabIndex = 35;
             this.label12.Text = "Затраты на разработку";
             this.label12.Click += new System.EventHandler(this.label12_Click);
@@ -1255,11 +1227,11 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label19.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label19.Location = new System.Drawing.Point(9, 184);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(178, 16);
+            this.label19.Size = new System.Drawing.Size(174, 17);
             this.label19.TabIndex = 34;
             this.label19.Text = "Затраты на материалы";
             this.label19.Click += new System.EventHandler(this.label19_Click);
@@ -1267,20 +1239,20 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(683, 9);
+            this.label11.Location = new System.Drawing.Point(532, 8);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(196, 16);
+            this.label11.Size = new System.Drawing.Size(204, 17);
             this.label11.TabIndex = 33;
             this.label11.Text = "Кол-во рабочих дней в месяц";
             this.label11.Click += new System.EventHandler(this.label11_Click_1);
             // 
             // tb_DayMonth
             // 
-            this.tb_DayMonth.Location = new System.Drawing.Point(897, 4);
+            this.tb_DayMonth.Location = new System.Drawing.Point(763, 3);
             this.tb_DayMonth.Margin = new System.Windows.Forms.Padding(4);
             this.tb_DayMonth.Name = "tb_DayMonth";
-            this.tb_DayMonth.Size = new System.Drawing.Size(50, 22);
+            this.tb_DayMonth.Size = new System.Drawing.Size(50, 25);
             this.tb_DayMonth.TabIndex = 7;
             this.tb_DayMonth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_DayMonth.TextChanged += new System.EventHandler(this.textBox30_TextChanged);
@@ -1289,19 +1261,19 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.Location = new System.Drawing.Point(9, 9);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(338, 16);
+            this.label5.Size = new System.Drawing.Size(323, 17);
             this.label5.TabIndex = 32;
             this.label5.Text = "Основная заработная плата разработчиков";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // buttonCalculateDev
             // 
-            this.buttonCalculateDev.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.buttonCalculateDev.Location = new System.Drawing.Point(1239, 251);
+            this.buttonCalculateDev.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonCalculateDev.Location = new System.Drawing.Point(1196, 268);
             this.buttonCalculateDev.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCalculateDev.Name = "buttonCalculateDev";
             this.buttonCalculateDev.Size = new System.Drawing.Size(200, 30);
@@ -1318,11 +1290,11 @@
             this.groupBox9.Controls.Add(this.tb_kmulti);
             this.groupBox9.Controls.Add(this.tb_cost1h);
             this.groupBox9.Controls.Add(this.label26);
-            this.groupBox9.Location = new System.Drawing.Point(955, 440);
+            this.groupBox9.Location = new System.Drawing.Point(821, 439);
             this.groupBox9.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox9.Size = new System.Drawing.Size(261, 135);
+            this.groupBox9.Size = new System.Drawing.Size(313, 135);
             this.groupBox9.TabIndex = 21;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Затраты на использование машинного времени";
@@ -1352,7 +1324,7 @@
             this.tb_tmv.Location = new System.Drawing.Point(8, 36);
             this.tb_tmv.Margin = new System.Windows.Forms.Padding(4);
             this.tb_tmv.Name = "tb_tmv";
-            this.tb_tmv.Size = new System.Drawing.Size(50, 22);
+            this.tb_tmv.Size = new System.Drawing.Size(50, 25);
             this.tb_tmv.TabIndex = 11;
             this.tb_tmv.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_tmv.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox18_KeyPress);
@@ -1362,7 +1334,7 @@
             this.tb_kmulti.Location = new System.Drawing.Point(8, 100);
             this.tb_kmulti.Margin = new System.Windows.Forms.Padding(4);
             this.tb_kmulti.Name = "tb_kmulti";
-            this.tb_kmulti.Size = new System.Drawing.Size(50, 22);
+            this.tb_kmulti.Size = new System.Drawing.Size(50, 25);
             this.tb_kmulti.TabIndex = 9;
             this.tb_kmulti.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_kmulti.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox16_KeyPress);
@@ -1372,7 +1344,7 @@
             this.tb_cost1h.Location = new System.Drawing.Point(8, 68);
             this.tb_cost1h.Margin = new System.Windows.Forms.Padding(4);
             this.tb_cost1h.Name = "tb_cost1h";
-            this.tb_cost1h.Size = new System.Drawing.Size(50, 22);
+            this.tb_cost1h.Size = new System.Drawing.Size(50, 25);
             this.tb_cost1h.TabIndex = 7;
             this.tb_cost1h.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_cost1h.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox17_KeyPress);
@@ -1397,7 +1369,7 @@
             this.dataGridViewAnalog.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewAnalog.Name = "dataGridViewAnalog";
             this.dataGridViewAnalog.RowHeadersWidth = 51;
-            this.dataGridViewAnalog.Size = new System.Drawing.Size(446, 216);
+            this.dataGridViewAnalog.Size = new System.Drawing.Size(390, 216);
             this.dataGridViewAnalog.TabIndex = 26;
             // 
             // dataGridViewTextBoxColumn18
@@ -1417,11 +1389,11 @@
             // groupBox8
             // 
             this.groupBox8.Controls.Add(this.tb_naclad);
-            this.groupBox8.Location = new System.Drawing.Point(955, 325);
+            this.groupBox8.Location = new System.Drawing.Point(821, 324);
             this.groupBox8.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox8.Size = new System.Drawing.Size(261, 71);
+            this.groupBox8.Size = new System.Drawing.Size(313, 71);
             this.groupBox8.TabIndex = 20;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Коэффициент, учитывающий накладные расходы организации";
@@ -1431,7 +1403,7 @@
             this.tb_naclad.Location = new System.Drawing.Point(8, 41);
             this.tb_naclad.Margin = new System.Windows.Forms.Padding(4);
             this.tb_naclad.Name = "tb_naclad";
-            this.tb_naclad.Size = new System.Drawing.Size(50, 22);
+            this.tb_naclad.Size = new System.Drawing.Size(50, 25);
             this.tb_naclad.TabIndex = 7;
             this.tb_naclad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_naclad.TextChanged += new System.EventHandler(this.textBox14_TextChanged);
@@ -1445,12 +1417,12 @@
             this.dataGridViewArticle.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column33,
             this.Column34});
-            this.dataGridViewArticle.Location = new System.Drawing.Point(466, 618);
+            this.dataGridViewArticle.Location = new System.Drawing.Point(414, 618);
             this.dataGridViewArticle.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewArticle.Name = "dataGridViewArticle";
             this.dataGridViewArticle.ReadOnly = true;
             this.dataGridViewArticle.RowHeadersWidth = 51;
-            this.dataGridViewArticle.Size = new System.Drawing.Size(481, 216);
+            this.dataGridViewArticle.Size = new System.Drawing.Size(399, 216);
             this.dataGridViewArticle.TabIndex = 23;
             // 
             // Column33
@@ -1472,11 +1444,11 @@
             // groupBox11
             // 
             this.groupBox11.Controls.Add(this.tb_H);
-            this.groupBox11.Location = new System.Drawing.Point(955, 741);
+            this.groupBox11.Location = new System.Drawing.Point(821, 740);
             this.groupBox11.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox11.Size = new System.Drawing.Size(261, 71);
+            this.groupBox11.Size = new System.Drawing.Size(313, 71);
             this.groupBox11.TabIndex = 22;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Норматив среднесуточной загрузки, час./день";
@@ -1486,7 +1458,7 @@
             this.tb_H.Location = new System.Drawing.Point(8, 36);
             this.tb_H.Margin = new System.Windows.Forms.Padding(4);
             this.tb_H.Name = "tb_H";
-            this.tb_H.Size = new System.Drawing.Size(50, 22);
+            this.tb_H.Size = new System.Drawing.Size(50, 25);
             this.tb_H.TabIndex = 7;
             this.tb_H.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_H.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox20_KeyPress);
@@ -1497,11 +1469,11 @@
             this.groupBox7.Controls.Add(this.tb_kr);
             this.groupBox7.Controls.Add(this.label6);
             this.groupBox7.Controls.Add(this.tb_ko);
-            this.groupBox7.Location = new System.Drawing.Point(955, 29);
+            this.groupBox7.Location = new System.Drawing.Point(821, 28);
             this.groupBox7.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox7.Size = new System.Drawing.Size(261, 106);
+            this.groupBox7.Size = new System.Drawing.Size(313, 106);
             this.groupBox7.TabIndex = 19;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Коэффициент, учитывающий дополнительную з/п";
@@ -1513,7 +1485,7 @@
             this.label24.Location = new System.Drawing.Point(66, 76);
             this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(168, 16);
+            this.label24.Size = new System.Drawing.Size(176, 17);
             this.label24.TabIndex = 10;
             this.label24.Text = "Районный коэффициент";
             // 
@@ -1522,7 +1494,7 @@
             this.tb_kr.Location = new System.Drawing.Point(8, 73);
             this.tb_kr.Margin = new System.Windows.Forms.Padding(4);
             this.tb_kr.Name = "tb_kr";
-            this.tb_kr.Size = new System.Drawing.Size(50, 22);
+            this.tb_kr.Size = new System.Drawing.Size(50, 25);
             this.tb_kr.TabIndex = 9;
             this.tb_kr.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_kr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox15_KeyPress);
@@ -1533,7 +1505,7 @@
             this.label6.Location = new System.Drawing.Point(66, 46);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(171, 16);
+            this.label6.Size = new System.Drawing.Size(182, 17);
             this.label6.TabIndex = 8;
             this.label6.Text = "Коэффициент отпускных";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -1543,7 +1515,7 @@
             this.tb_ko.Location = new System.Drawing.Point(8, 43);
             this.tb_ko.Margin = new System.Windows.Forms.Padding(4);
             this.tb_ko.Name = "tb_ko";
-            this.tb_ko.Size = new System.Drawing.Size(50, 22);
+            this.tb_ko.Size = new System.Drawing.Size(50, 25);
             this.tb_ko.TabIndex = 7;
             this.tb_ko.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_ko.TextChanged += new System.EventHandler(this.tb_ko_TextChanged);
@@ -1559,11 +1531,11 @@
             this.groupBox6.Controls.Add(this.tb_ffomc);
             this.groupBox6.Controls.Add(this.label20);
             this.groupBox6.Controls.Add(this.label21);
-            this.groupBox6.Location = new System.Drawing.Point(955, 143);
+            this.groupBox6.Location = new System.Drawing.Point(821, 142);
             this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox6.Size = new System.Drawing.Size(261, 174);
+            this.groupBox6.Size = new System.Drawing.Size(313, 174);
             this.groupBox6.TabIndex = 18;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Коэффициент, учитывающий отчисления на социальные нужды";
@@ -1584,8 +1556,9 @@
             this.tb_ctrax.Location = new System.Drawing.Point(8, 140);
             this.tb_ctrax.Margin = new System.Windows.Forms.Padding(4);
             this.tb_ctrax.Name = "tb_ctrax";
-            this.tb_ctrax.Size = new System.Drawing.Size(50, 22);
+            this.tb_ctrax.Size = new System.Drawing.Size(50, 25);
             this.tb_ctrax.TabIndex = 6;
+            this.tb_ctrax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_ctrax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox12_KeyPress);
             // 
             // tb_pf
@@ -1593,8 +1566,9 @@
             this.tb_pf.Location = new System.Drawing.Point(8, 46);
             this.tb_pf.Margin = new System.Windows.Forms.Padding(4);
             this.tb_pf.Name = "tb_pf";
-            this.tb_pf.Size = new System.Drawing.Size(50, 22);
+            this.tb_pf.Size = new System.Drawing.Size(50, 25);
             this.tb_pf.TabIndex = 0;
+            this.tb_pf.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_pf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox9_KeyPress);
             // 
             // tb_fcc
@@ -1602,8 +1576,9 @@
             this.tb_fcc.Location = new System.Drawing.Point(8, 78);
             this.tb_fcc.Margin = new System.Windows.Forms.Padding(4);
             this.tb_fcc.Name = "tb_fcc";
-            this.tb_fcc.Size = new System.Drawing.Size(50, 22);
+            this.tb_fcc.Size = new System.Drawing.Size(50, 25);
             this.tb_fcc.TabIndex = 2;
+            this.tb_fcc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_fcc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox10_KeyPress);
             // 
             // label22
@@ -1612,7 +1587,7 @@
             this.label22.Location = new System.Drawing.Point(66, 81);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(36, 16);
+            this.label22.Size = new System.Drawing.Size(36, 17);
             this.label22.TabIndex = 5;
             this.label22.Text = "ФСС";
             // 
@@ -1621,8 +1596,9 @@
             this.tb_ffomc.Location = new System.Drawing.Point(8, 110);
             this.tb_ffomc.Margin = new System.Windows.Forms.Padding(4);
             this.tb_ffomc.Name = "tb_ffomc";
-            this.tb_ffomc.Size = new System.Drawing.Size(50, 22);
+            this.tb_ffomc.Size = new System.Drawing.Size(50, 25);
             this.tb_ffomc.TabIndex = 4;
+            this.tb_ffomc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_ffomc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox11_KeyPress);
             // 
             // label20
@@ -1631,7 +1607,7 @@
             this.label20.Location = new System.Drawing.Point(66, 49);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(28, 16);
+            this.label20.Size = new System.Drawing.Size(30, 17);
             this.label20.TabIndex = 1;
             this.label20.Text = "ПФ";
             // 
@@ -1641,7 +1617,7 @@
             this.label21.Location = new System.Drawing.Point(66, 113);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(59, 16);
+            this.label21.Size = new System.Drawing.Size(62, 17);
             this.label21.TabIndex = 3;
             this.label21.Text = "ФФОМС";
             // 
@@ -1653,12 +1629,12 @@
             this.groupBox3.Controls.Add(this.tb_Kp);
             this.groupBox3.Controls.Add(this.tb_Kr2);
             this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox3.Location = new System.Drawing.Point(1239, 29);
+            this.groupBox3.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox3.Location = new System.Drawing.Point(1196, 29);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(200, 214);
+            this.groupBox3.Size = new System.Drawing.Size(200, 231);
             this.groupBox3.TabIndex = 12;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Затраты на разработку проекта";
@@ -1666,11 +1642,11 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(8, 151);
+            this.label9.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.Location = new System.Drawing.Point(8, 167);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(114, 23);
+            this.label9.Size = new System.Drawing.Size(113, 21);
             this.label9.TabIndex = 13;
             this.label9.Text = "K результат";
             this.label9.Click += new System.EventHandler(this.label9_Click);
@@ -1678,20 +1654,21 @@
             // tb_Kitog
             // 
             this.tb_Kitog.Enabled = false;
-            this.tb_Kitog.Location = new System.Drawing.Point(12, 178);
+            this.tb_Kitog.Location = new System.Drawing.Point(12, 194);
             this.tb_Kitog.Margin = new System.Windows.Forms.Padding(4);
             this.tb_Kitog.Name = "tb_Kitog";
-            this.tb_Kitog.Size = new System.Drawing.Size(132, 22);
+            this.tb_Kitog.Size = new System.Drawing.Size(132, 25);
             this.tb_Kitog.TabIndex = 12;
+            this.tb_Kitog.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(8, 98);
+            this.label8.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.Location = new System.Drawing.Point(8, 106);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(135, 23);
+            this.label8.Size = new System.Drawing.Size(130, 21);
             this.label8.TabIndex = 11;
             this.label8.Text = "K реализация";
             this.label8.Click += new System.EventHandler(this.label8_Click);
@@ -1702,27 +1679,29 @@
             this.tb_Kp.Location = new System.Drawing.Point(12, 71);
             this.tb_Kp.Margin = new System.Windows.Forms.Padding(4);
             this.tb_Kp.Name = "tb_Kp";
-            this.tb_Kp.Size = new System.Drawing.Size(132, 22);
+            this.tb_Kp.Size = new System.Drawing.Size(132, 25);
             this.tb_Kp.TabIndex = 6;
+            this.tb_Kp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_Kp.TextChanged += new System.EventHandler(this.tb_Kp_TextChanged);
             // 
             // tb_Kr2
             // 
             this.tb_Kr2.Enabled = false;
-            this.tb_Kr2.Location = new System.Drawing.Point(12, 125);
+            this.tb_Kr2.Location = new System.Drawing.Point(12, 133);
             this.tb_Kr2.Margin = new System.Windows.Forms.Padding(4);
             this.tb_Kr2.Name = "tb_Kr2";
-            this.tb_Kr2.Size = new System.Drawing.Size(132, 22);
+            this.tb_Kr2.Size = new System.Drawing.Size(132, 25);
             this.tb_Kr2.TabIndex = 10;
+            this.tb_Kr2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label7.Location = new System.Drawing.Point(8, 44);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(179, 23);
+            this.label7.Size = new System.Drawing.Size(172, 21);
             this.label7.TabIndex = 7;
             this.label7.Text = "K проектирование";
             this.label7.Click += new System.EventHandler(this.label7_Click);
@@ -1740,7 +1719,7 @@
             this.dataGridViewOborudovanie.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewOborudovanie.Name = "dataGridViewOborudovanie";
             this.dataGridViewOborudovanie.RowHeadersWidth = 51;
-            this.dataGridViewOborudovanie.Size = new System.Drawing.Size(935, 137);
+            this.dataGridViewOborudovanie.Size = new System.Drawing.Size(801, 137);
             this.dataGridViewOborudovanie.TabIndex = 9;
             this.dataGridViewOborudovanie.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewOborudovanie_CellValueChanged);
             this.dataGridViewOborudovanie.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridViewOborudovanie_EditingControlShowing);
@@ -1750,7 +1729,7 @@
             this.Column14.HeaderText = "Оборудование";
             this.Column14.MinimumWidth = 6;
             this.Column14.Name = "Column14";
-            this.Column14.Width = 180;
+            this.Column14.Width = 210;
             // 
             // Column13
             // 
@@ -1788,8 +1767,9 @@
             this.dataGridViewMaterial.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewMaterial.Name = "dataGridViewMaterial";
             this.dataGridViewMaterial.RowHeadersWidth = 51;
-            this.dataGridViewMaterial.Size = new System.Drawing.Size(935, 192);
+            this.dataGridViewMaterial.Size = new System.Drawing.Size(801, 192);
             this.dataGridViewMaterial.TabIndex = 4;
+            this.dataGridViewMaterial.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMaterial_CellContentClick);
             this.dataGridViewMaterial.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMaterial_CellValueChanged);
             this.dataGridViewMaterial.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridViewMaterial_EditingControlShowing);
             // 
@@ -1798,7 +1778,7 @@
             this.dataGridViewTextBoxColumn1.HeaderText = "Материалы";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 150;
+            this.dataGridViewTextBoxColumn1.Width = 180;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -1845,7 +1825,7 @@
             this.dataGridViewSalary.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewSalary.Name = "dataGridViewSalary";
             this.dataGridViewSalary.RowHeadersWidth = 51;
-            this.dataGridViewSalary.Size = new System.Drawing.Size(935, 130);
+            this.dataGridViewSalary.Size = new System.Drawing.Size(801, 130);
             this.dataGridViewSalary.TabIndex = 3;
             this.dataGridViewSalary.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewSalary_CellValueChanged);
             this.dataGridViewSalary.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridViewSalary_EditingControlShowing);
@@ -1892,11 +1872,11 @@
             // groupBox24
             // 
             this.groupBox24.Controls.Add(this.tb_Uk);
-            this.groupBox24.Location = new System.Drawing.Point(955, 583);
+            this.groupBox24.Location = new System.Drawing.Point(821, 582);
             this.groupBox24.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox24.Name = "groupBox24";
             this.groupBox24.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox24.Size = new System.Drawing.Size(261, 71);
+            this.groupBox24.Size = new System.Drawing.Size(313, 71);
             this.groupBox24.TabIndex = 31;
             this.groupBox24.TabStop = false;
             this.groupBox24.Text = "Частота (периодичность) решения к-й задачи, дней/год";
@@ -1906,8 +1886,9 @@
             this.tb_Uk.Location = new System.Drawing.Point(8, 38);
             this.tb_Uk.Margin = new System.Windows.Forms.Padding(4);
             this.tb_Uk.Name = "tb_Uk";
-            this.tb_Uk.Size = new System.Drawing.Size(50, 22);
+            this.tb_Uk.Size = new System.Drawing.Size(50, 25);
             this.tb_Uk.TabIndex = 9;
+            this.tb_Uk.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_Uk.TextChanged += new System.EventHandler(this.TextBox35_TextChanged);
             this.tb_Uk.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox35_KeyPress);
             // 
@@ -1922,11 +1903,12 @@
             this.tabPagePlan.Controls.Add(this.dateTimePicker1);
             this.tabPagePlan.Controls.Add(this.buttonCalculatePlan);
             this.tabPagePlan.Controls.Add(this.dataGridViewPlan);
-            this.tabPagePlan.Location = new System.Drawing.Point(4, 25);
+            this.tabPagePlan.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tabPagePlan.Location = new System.Drawing.Point(4, 26);
             this.tabPagePlan.Margin = new System.Windows.Forms.Padding(4);
             this.tabPagePlan.Name = "tabPagePlan";
             this.tabPagePlan.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPagePlan.Size = new System.Drawing.Size(1461, 873);
+            this.tabPagePlan.Size = new System.Drawing.Size(1461, 872);
             this.tabPagePlan.TabIndex = 1;
             this.tabPagePlan.Text = "Расчет план-графика работ";
             this.tabPagePlan.UseVisualStyleBackColor = true;
@@ -1955,10 +1937,10 @@
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(33, 544);
+            this.label32.Location = new System.Drawing.Point(31, 544);
             this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(95, 16);
+            this.label32.Size = new System.Drawing.Size(100, 17);
             this.label32.TabIndex = 12;
             this.label32.Text = "Программист";
             this.label32.Click += new System.EventHandler(this.label32_Click);
@@ -1969,7 +1951,7 @@
             this.label31.Location = new System.Drawing.Point(27, 528);
             this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(101, 16);
+            this.label31.Size = new System.Drawing.Size(105, 17);
             this.label31.TabIndex = 11;
             this.label31.Text = "Руководитель";
             this.label31.Click += new System.EventHandler(this.label31_Click);
@@ -1977,37 +1959,37 @@
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label30.Location = new System.Drawing.Point(9, 512);
+            this.label30.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label30.Location = new System.Drawing.Point(9, 511);
             this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(83, 16);
+            this.label30.Size = new System.Drawing.Size(86, 17);
             this.label30.TabIndex = 10;
             this.label30.Text = "Всего дней:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(206, 482);
+            this.label4.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(206, 481);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(141, 16);
+            this.label4.Size = new System.Drawing.Size(142, 17);
             this.label4.TabIndex = 9;
             this.label4.Text = "Дата начала работы";
             this.label4.Click += new System.EventHandler(this.label4_Click_2);
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(8, 477);
+            this.dateTimePicker1.Location = new System.Drawing.Point(8, 475);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(190, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(190, 25);
             this.dateTimePicker1.TabIndex = 2;
             // 
             // buttonCalculatePlan
             // 
-            this.buttonCalculatePlan.Location = new System.Drawing.Point(731, 475);
+            this.buttonCalculatePlan.Location = new System.Drawing.Point(1036, 475);
             this.buttonCalculatePlan.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCalculatePlan.Name = "buttonCalculatePlan";
             this.buttonCalculatePlan.Size = new System.Drawing.Size(200, 30);
@@ -2032,7 +2014,7 @@
             this.dataGridViewPlan.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewPlan.Name = "dataGridViewPlan";
             this.dataGridViewPlan.RowHeadersWidth = 51;
-            this.dataGridViewPlan.Size = new System.Drawing.Size(922, 459);
+            this.dataGridViewPlan.Size = new System.Drawing.Size(1228, 459);
             this.dataGridViewPlan.TabIndex = 0;
             this.dataGridViewPlan.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridViewPlan_EditingControlShowing);
             // 
@@ -2043,7 +2025,7 @@
             this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
-            this.Column7.Width = 300;
+            this.Column7.Width = 360;
             // 
             // Column8
             // 
@@ -2052,7 +2034,7 @@
             this.Column8.MinimumWidth = 6;
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
-            this.Column8.Width = 80;
+            this.Column8.Width = 125;
             // 
             // Column9
             // 
@@ -2060,7 +2042,7 @@
             this.Column9.HeaderText = "Длительность, дни";
             this.Column9.MinimumWidth = 6;
             this.Column9.Name = "Column9";
-            this.Column9.Width = 80;
+            this.Column9.Width = 125;
             // 
             // Column10
             // 
@@ -2068,7 +2050,7 @@
             this.Column10.MinimumWidth = 6;
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
-            this.Column10.Width = 80;
+            this.Column10.Width = 125;
             // 
             // Column11
             // 
@@ -2076,7 +2058,7 @@
             this.Column11.MinimumWidth = 6;
             this.Column11.Name = "Column11";
             this.Column11.ReadOnly = true;
-            this.Column11.Width = 80;
+            this.Column11.Width = 125;
             // 
             // tabPageKTC
             // 
@@ -2089,11 +2071,12 @@
             this.tabPageKTC.Controls.Add(this.label3);
             this.tabPageKTC.Controls.Add(this.label2);
             this.tabPageKTC.Controls.Add(this.label1);
-            this.tabPageKTC.Location = new System.Drawing.Point(4, 25);
+            this.tabPageKTC.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tabPageKTC.Location = new System.Drawing.Point(4, 26);
             this.tabPageKTC.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageKTC.Name = "tabPageKTC";
             this.tabPageKTC.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPageKTC.Size = new System.Drawing.Size(1461, 873);
+            this.tabPageKTC.Size = new System.Drawing.Size(1461, 872);
             this.tabPageKTC.TabIndex = 0;
             this.tabPageKTC.Text = "Расчет КТC";
             this.tabPageKTC.UseVisualStyleBackColor = true;
@@ -2113,41 +2096,43 @@
             // Ak_result
             // 
             this.Ak_result.AutoSize = true;
-            this.Ak_result.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Ak_result.Location = new System.Drawing.Point(450, 425);
+            this.Ak_result.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Ak_result.Location = new System.Drawing.Point(452, 425);
             this.Ak_result.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Ak_result.Name = "Ak_result";
-            this.Ak_result.Size = new System.Drawing.Size(25, 16);
+            this.Ak_result.Size = new System.Drawing.Size(27, 17);
             this.Ak_result.TabIndex = 10;
             this.Ak_result.Text = "Ak";
             // 
             // j_analog_result
             // 
             this.j_analog_result.AutoSize = true;
-            this.j_analog_result.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.j_analog_result.Location = new System.Drawing.Point(310, 425);
+            this.j_analog_result.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.j_analog_result.Location = new System.Drawing.Point(312, 425);
             this.j_analog_result.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.j_analog_result.Name = "j_analog_result";
-            this.j_analog_result.Size = new System.Drawing.Size(101, 16);
+            this.j_analog_result.Size = new System.Drawing.Size(92, 17);
             this.j_analog_result.TabIndex = 9;
             this.j_analog_result.Text = "Jэту_аналог";
             // 
             // j_project_result
             // 
             this.j_project_result.AutoSize = true;
-            this.j_project_result.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.j_project_result.Location = new System.Drawing.Point(103, 425);
+            this.j_project_result.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.j_project_result.Location = new System.Drawing.Point(105, 425);
             this.j_project_result.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.j_project_result.Name = "j_project_result";
-            this.j_project_result.Size = new System.Drawing.Size(101, 16);
+            this.j_project_result.Size = new System.Drawing.Size(94, 17);
             this.j_project_result.TabIndex = 8;
             this.j_project_result.Text = "Jэту_проект";
             this.j_project_result.Click += new System.EventHandler(this.label4_Click);
             // 
             // buttonCalculateKTC
             // 
-            this.buttonCalculateKTC.BackColor = System.Drawing.Color.Transparent;
-            this.buttonCalculateKTC.Location = new System.Drawing.Point(663, 418);
+            this.buttonCalculateKTC.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonCalculateKTC.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonCalculateKTC.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonCalculateKTC.Location = new System.Drawing.Point(764, 418);
             this.buttonCalculateKTC.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCalculateKTC.Name = "buttonCalculateKTC";
             this.buttonCalculateKTC.Size = new System.Drawing.Size(200, 30);
@@ -2172,7 +2157,7 @@
             this.dataGridViewKTC.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewKTC.Name = "dataGridViewKTC";
             this.dataGridViewKTC.RowHeadersWidth = 51;
-            this.dataGridViewKTC.Size = new System.Drawing.Size(855, 402);
+            this.dataGridViewKTC.Size = new System.Drawing.Size(956, 402);
             this.dataGridViewKTC.TabIndex = 0;
             this.dataGridViewKTC.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridViewKTC.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewKTC_CellValueChanged);
@@ -2192,7 +2177,7 @@
             this.Column2.MaxInputLength = 4;
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
-            this.Column2.Width = 85;
+            this.Column2.Width = 125;
             // 
             // Column5
             // 
@@ -2201,7 +2186,7 @@
             this.Column5.MaxInputLength = 1;
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
-            this.Column5.Width = 50;
+            this.Column5.Width = 60;
             // 
             // Column3
             // 
@@ -2210,7 +2195,7 @@
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column3.Width = 50;
+            this.Column3.Width = 60;
             // 
             // Column6
             // 
@@ -2218,7 +2203,7 @@
             this.Column6.MaxInputLength = 1;
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
-            this.Column6.Width = 50;
+            this.Column6.Width = 60;
             // 
             // Column4
             // 
@@ -2226,15 +2211,15 @@
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            this.Column4.Width = 50;
+            this.Column4.Width = 60;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(419, 425);
+            this.label3.Location = new System.Drawing.Point(423, 425);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(23, 16);
+            this.label3.Size = new System.Drawing.Size(25, 17);
             this.label3.TabIndex = 6;
             this.label3.Text = "Ak";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -2242,10 +2227,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(212, 425);
+            this.label2.Location = new System.Drawing.Point(216, 425);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 16);
+            this.label2.Size = new System.Drawing.Size(88, 17);
             this.label2.TabIndex = 4;
             this.label2.Text = "Jэту_аналог";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -2253,10 +2238,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(5, 425);
+            this.label1.Location = new System.Drawing.Point(9, 425);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 16);
+            this.label1.Size = new System.Drawing.Size(90, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Jэту_проект";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -2269,12 +2254,55 @@
             this.tabControl.Controls.Add(this.tabPageExp);
             this.tabControl.Controls.Add(this.tabPageEffect);
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tabControl.Location = new System.Drawing.Point(0, 0);
             this.tabControl.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(1469, 902);
             this.tabControl.TabIndex = 0;
+            // 
+            // Column24
+            // 
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column24.DefaultCellStyle = dataGridViewCellStyle14;
+            this.Column24.HeaderText = "Характеристика ";
+            this.Column24.MinimumWidth = 6;
+            this.Column24.Name = "Column24";
+            this.Column24.ReadOnly = true;
+            this.Column24.Width = 210;
+            // 
+            // Column25
+            // 
+            this.Column25.HeaderText = "Продукт-аналог";
+            this.Column25.MinimumWidth = 6;
+            this.Column25.Name = "Column25";
+            this.Column25.ReadOnly = true;
+            this.Column25.Width = 120;
+            // 
+            // Column26
+            // 
+            this.Column26.HeaderText = "Разрабатываемый продукт";
+            this.Column26.MinimumWidth = 6;
+            this.Column26.Name = "Column26";
+            this.Column26.ReadOnly = true;
+            this.Column26.Width = 120;
+            // 
+            // Column30
+            // 
+            this.Column30.HeaderText = "Характеристика проекта";
+            this.Column30.MinimumWidth = 6;
+            this.Column30.Name = "Column30";
+            this.Column30.ReadOnly = true;
+            this.Column30.Width = 300;
+            // 
+            // Column31
+            // 
+            this.Column31.HeaderText = "Значение";
+            this.Column31.MinimumWidth = 6;
+            this.Column31.Name = "Column31";
+            this.Column31.ReadOnly = true;
+            this.Column31.Width = 150;
             // 
             // TEO
             // 
@@ -2360,8 +2388,6 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.TextBox tb_en;
         private System.Windows.Forms.DataGridView dataGridViewEconomResults;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column30;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column31;
         private System.Windows.Forms.Button buttonCalculateEconom;
         private System.Windows.Forms.DataGridView dataGridViewEconomEffect;
         private System.Windows.Forms.TabPage tabPageExp;
@@ -2453,18 +2479,7 @@
         private System.Windows.Forms.Label j_project_result;
         private System.Windows.Forms.Label Ak_result;
         private System.Windows.Forms.Label j_analog_result;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.Label itog_KTC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
@@ -2474,11 +2489,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox tb_cost1h;
         private System.Windows.Forms.Label label28;
@@ -2500,10 +2510,6 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label itog_sum_oborud;
         private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
         private System.Windows.Forms.Label label33;
@@ -2536,9 +2542,31 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Label itog_EconomResult;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column24;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column25;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column26;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column30;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column31;
     }
 }
 
