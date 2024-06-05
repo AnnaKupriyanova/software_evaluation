@@ -49,6 +49,10 @@ body {
   position: fixed;
 }
 
+#LOC{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
 hr {
   border: none; 
   background-color: rgb(255, 179, 98);

@@ -35,8 +35,8 @@ function calculate1(){
 		handleProjectType1(arr1);
 		PM = a * Math.pow(size, b);
 		TM = c * Math.pow(PM, d);
-		document.getElementById('formula1').innerHTML = " = " + PM;
-		document.getElementById('formula2').innerHTML = " = " + TM;
+		document.getElementById('formula1').innerHTML = " = " + PM.toFixed(2);
+		document.getElementById('formula2').innerHTML = " = " + TM.toFixed(2);
 	}
 }
 
@@ -71,8 +71,8 @@ function calculate(){
 			PM = EAF * a * Math.pow(size, b);
 			handleProjectType1(arr1);
 			TM = c * Math.pow(PM, d);
-			document.getElementById('formula').innerHTML = " = " + PM;
-			document.getElementById('formula3').innerHTML = " = " + TM;
+			document.getElementById('formula').innerHTML = " = " + PM.toFixed(2);
+			document.getElementById('formula3').innerHTML = " = " + TM.toFixed(2);
 		}
 }
 
@@ -161,8 +161,8 @@ function calculateCocomoTwo(){
 					TM = SCED * c * Math.pow(PMNS, (d + 0.20 * (e-b)));
 				}
 
-			document.getElementById('formula11').innerHTML = " = " + PM;
-			document.getElementById('formula122').innerHTML = " = " + TM;
+			document.getElementById('formula11').innerHTML = " = " + PM.toFixed(2);
+			document.getElementById('formula122').innerHTML = " = " + TM.toFixed(2);
 		}
 }
 
