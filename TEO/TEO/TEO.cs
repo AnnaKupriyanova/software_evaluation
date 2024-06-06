@@ -313,15 +313,23 @@ namespace TEO
                         date = Convert.ToDateTime(dataGridViewPlan.Rows[i - 1].Cells[4].Value); //Предыдущая дата                       
                     else date = Convert.ToDateTime(dataGridViewPlan.Rows[i - 2].Cells[4].Value);
 
-                    date = date.AddDays(1); //Прибавляем день с новой работы
+                    date = date.AddDays(1);
+
                     dataGridViewPlan.Rows[i].Cells[3].Value = date.ToShortDateString();
-                    date = date.AddDays(Convert.ToInt32(dataGridViewPlan.Rows[i].Cells[2].Value) - 1);
+
+                    if (Convert.ToInt32(dataGridViewPlan.Rows[i].Cells[2].Value) > 0)
+                    {
+                        date = date.AddDays(Convert.ToInt32(dataGridViewPlan.Rows[i].Cells[2].Value) - 1);
+                    } else date = date.AddDays(Convert.ToInt32(dataGridViewPlan.Rows[i].Cells[2].Value));
+
                     dataGridViewPlan.Rows[i].Cells[4].Value = date.ToShortDateString();
 
                     dataGridViewPlan.Rows[i + 1].Cells[3].Value = dataGridViewPlan.Rows[i].Cells[3].Value;
 
                     date = Convert.ToDateTime(dataGridViewPlan.Rows[i + 1].Cells[3].Value);
+
                     date = date.AddDays(Convert.ToInt32(dataGridViewPlan.Rows[i + 1].Cells[2].Value) - 1);
+
                     dataGridViewPlan.Rows[i + 1].Cells[4].Value = date.ToShortDateString();
                 }
             }
